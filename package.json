@@ -1,0 +1,50 @@
+{
+  "name": "faceblog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.7.2",
+    "@prisma/client": "^5.21.1",
+    "@tailwindcss/typography": "^0.5.15",
+    "@tiptap/extension-bubble-menu": "^2.9.1",
+    "@tiptap/extension-heading": "^2.9.1",
+    "@tiptap/extension-image": "^2.9.1",
+    "@tiptap/extension-link": "^2.9.1",
+    "@tiptap/extension-placeholder": "^2.9.1",
+    "@tiptap/pm": "^2.9.1",
+    "@tiptap/react": "^2.9.1",
+    "@tiptap/starter-kit": "^2.9.1",
+    "axios": "^1.7.7",
+    "cloudinary": "^2.5.1",
+    "faceblog": "file:",
+    "lucide-react": "^0.454.0",
+    "next": "15.0.2",
+    "next-auth": "^4.24.10",
+    "react": "19.0.0-rc-02c0e824-20241028",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-hot-toast": "^2.4.1",
+    "react-quill": "^2.0.0",
+    "swr": "^2.2.5",
+    "tailwindcss-motion": "^0.3.0-beta"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/use-sync-external-store": "^0.0.6",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.2",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "prisma": "^5.21.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
