@@ -16,7 +16,7 @@ const getCategories = cache(async () => {
   try {
     const categories = await axios.get(
       `${process.env.NEXT_PUBLIC_API_URL}/api/categories`,
-      { timeout: 5000 }
+      { timeout: 10000 }
     );
     if (categories.status !== 200) {
       throw new Error("Failed to fetch categories");

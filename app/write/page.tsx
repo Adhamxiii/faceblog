@@ -123,7 +123,7 @@ const Write = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <select
-          className="px-5 py-[10px]"
+          className="px-5 py-[10px] bg-[var(--bg)]"
           onChange={(e) => setCatSlug(e.target.value)}
         >
           <option value="style">style</option>

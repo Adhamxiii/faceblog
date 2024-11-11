@@ -28,15 +28,15 @@ const CardList = async ({
 }) => {
   const { posts, count } = await getPosts(page, category);
   return (
-    <div className="flex-[5]">
+    <div className="flex-[5]" key={page}>
       <h1 className="my-[50px] text-4xl font-semibold">Recent Posts</h1>
       
       {posts?.map((post: any) => <Card key={post._id} post={post} />)}
     
       <Pagination
         page={page}
-        hasPrevious={2 * (page - 1) > 0}
-        hasNext={2 * (page - 1) + 2 < count}
+        hasPrevious={5 * (page - 1) > 0}
+        hasNext={5 * (page - 1) + 5 < count}
       />
     </div>
   );

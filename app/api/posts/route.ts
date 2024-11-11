@@ -8,8 +8,8 @@ export const GET = async (req: NextRequest) => {
   try {
     const [posts, count] = await prisma.$transaction([
       prisma.post.findMany({
-        skip: (page - 1) * 2,
-        take: 2,
+        skip: (page - 1) * 5,
+        take: 5,
         where: {
           ...(category && { catSlug: category }),
         },
