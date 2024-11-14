@@ -4,8 +4,10 @@ import prisma from "@/utils/connect";
 export const GET = async (req: NextRequest) => {
 
   try {
-    const { searchParams } = new URL(req.url);
-    const slug = searchParams.get("slug");
+    const { pathname } = new URL(req.url);
+    const slug = pathname.split('/').pop();
+
+    console.log("Slug received:", slug);
 
     if (!slug) {
       return NextResponse.json({ message: "Slug is required" }, { status: 400 });
