@@ -15,7 +15,7 @@ enum CategoryBackgrounds {
 const getCategories = cache(async () => {
   try {
     const categories = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/categories`,
+      `https://faceblog-ebon.vercel.app/api/categories`,
       { timeout: 10000 }
     );
     if (categories.status !== 200) {

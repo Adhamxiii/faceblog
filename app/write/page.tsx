@@ -93,7 +93,7 @@ const Write = () => {
       toast.loading("Publishing your post...", { id: "publish" });
 
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/posts`,
+        `https://faceblog-ebon.vercel.app/api/posts`,
         {
           title,
           desc: content,

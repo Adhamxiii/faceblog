@@ -27,7 +27,7 @@ const Comments = ({ postSlug }: any) => {
   const [comment, setComment] = useState("");
 
   const { data, isLoading, mutate } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/comments?postSlug=${postSlug}`,
+    `https://faceblog-ebon.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher,
   );
 
@@ -40,7 +40,7 @@ const Comments = ({ postSlug }: any) => {
 
       toast.loading("Posting comment...", { id: "comment" });
 
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/comments`, {
+      await axios.post(`https://faceblog-ebon.vercel.app/api/comments`, {
         desc: comment,
         postSlug,
       });

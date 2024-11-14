@@ -6,7 +6,7 @@ import { cache } from "react";
 const getPosts = cache(async (page: number, category?: string) => {
   try {
     const posts = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/posts?page=${page}&category=${category || ""}`,
+      `https://faceblog-ebon.vercel.app/api/posts?page=${page}&category=${category || ""}`,
       { timeout: 5000 },
     );
     if (posts.status !== 200) {

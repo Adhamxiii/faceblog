@@ -6,7 +6,7 @@ import Image from "next/image";
 const getPost = async (slug: string) => {
   try {
     const res = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`,
+      `https://faceblog-ebon.vercel.app/api/posts/${slug}`,
     );
     return res.data;
   } catch (error) {
